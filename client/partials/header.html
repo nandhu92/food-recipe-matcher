@@ -1,0 +1,19 @@
+<div ng-controller="LogoutController">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><b>FOOD</b> <span class="span-style">Guru</span></a>
+
+
+
+
+                  <a ng-hide="navvm.isLoggedIn" class="navbar-brand navbar-right" href="#/login"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+                  <a ng-hide="navvm.isLoggedIn" class="navbar-brand navbar-right" ng-href="#/signUp"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
+                  <a ng-show="navvm.isLoggedIn" class="navbar-brand navbar-right" ng-href="#/signUp"></span>Welcome, {{ navvm.currentUser.name }}<span class="glyphicon glyphicon-user"></a>
+                  <a ng-show="navvm.isLoggedIn" class="navbar-brand navbar-right" style="cursor:pointer" ng-click="logout()"></span>Logout</a>
+
+
+</div>
+</nav>
+</div>
