@@ -11,10 +11,6 @@ app.use(express.static(path.join(__dirname, "./client")));
 app.use(express.static(path.join(__dirname, "./bower_components")));
 app.use(bodyParser.json());
 app.use(passport.initialize());
-// app.use(session({secret : 'abcd',
-// 								saveUninitialized : false,
-// 								resave : false}));
-
 
 require('./server/config/mongoose.js');
 require('./server/config/passport.js');

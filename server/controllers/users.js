@@ -8,22 +8,8 @@ function UsersController() {
 
   this.register = function(req, res){
 
-  //  console.log(req.body);
     var user = new User();
-    // console.log(user.setPassword(req.body.password));
-    // console.log(user);
-    // user.ping();
-    // res.end();
 
- // var user = new User();
-  //   console.log(user.setPassword(req.body.password));
- //
- //    var userData = {
- //       name: req.body.name,
- //  username: req.body.username,
- //  email: req.body.email,
- //  password: req.body.password
- //    }
 
  user.name = req.body.name;
   user.username = req.body.username,
@@ -31,7 +17,6 @@ function UsersController() {
 user.setPassword(req.body.password);
 
 		console.log('fourth: create function users controller /server/controllers/users.js');
-		// User.create(req.body, function(err, user){
 			console.log("sending json back to user factory check browser console")
 			// if(err){
       //
@@ -102,14 +87,17 @@ user.setPassword(req.body.password);
           var user = new User();
 
 
-            user.update({
-                name: req.body.name},{$push: {
-                  "ingredientslist" : {
-                    "dish": req.body.saveName,
-                    "saved": req.body.ingredients
-                  }
-                  }
-                   },
+            // user.update({
+            //     name: req.body.name},{$push: {
+            //       "ingredientslist" : {
+            //         dish: req.body.saveName
+            //         //"saved": req.body.ingredients
+            //       }
+            //       }
+            //        },
+            user.findOne({
+                name: req.body.name},
+
             function(err, data) {
               if(err){
                 console.log(err);
@@ -124,10 +112,10 @@ user.setPassword(req.body.password);
                 //                 name: "Validation error"
                 //             });
         			} else {
-                //console.log(data);
+                console.log(data);
         				res.json(data);
         			}
-            })
+            });
         }
 
 
