@@ -20,6 +20,11 @@ app.post('/get_recipe', function (req, res){
 recipes.find(req, res);
   })
 
+  app.post('/show_ingredients', function (req, res){
+
+  users.names(req, res);
+    })
+
   app.post('/save_recipe', function (req, res){
 
   users.save(req, res);

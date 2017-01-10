@@ -1,4 +1,4 @@
-myApp.controller('LoginController', function($scope, $rootScope, $cookies, $window, $location, authenticationService, Flash) {
+myApp.controller('LoginController', function($scope, $rootScope, $route, $templateCache, $cookies, $window, $location, authenticationService, Flash) {
 
   $scope.showModal = true;
   var objs = authenticationService.getToken();
@@ -36,7 +36,15 @@ $scope.login = function() {
                   $scope.showModal = false;
                 //  $location.path("displayuser");
                   //console.log("hey there");
-               $window.location = 'index.html'
+              // $window.location = 'index.html'
+//               var currentPageTemplate = $route.current.templateUrl;
+//               console.log(currentPageTemplate);
+// $templateCache.remove(currentPageTemplate);
+// $location.path("displayuserfaf");
+// console.log($location.path());
+
+//$route.reload();
+            //  $route.reload("/displayuser");
                 });
 
 
@@ -63,5 +71,6 @@ $scope.login = function() {
 // // }
 //
 // })
+ $location.path("displayuser");
 }
   });

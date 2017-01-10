@@ -16,6 +16,14 @@
 </head>
 
 <body>
+
+
+    
+
+
+
+
+  <div id="loading-bar-container"></div>
     <div class="container-fluid outerdiv">
 <navigation></navigation>
 
@@ -36,31 +44,44 @@
         <div class="line"></div>
 
 
+
         <div ng-view=""></div>
 
         <!-- load angular -->
+
 
         <script src="js/angular.min.js"></script>
         <script src="js/angular-messages.js"></script>
         <script src="js/angular-route.js"></script>
         <script src="js/angular-cookies.js"></script>
         <script src="js/angular-cookies.min.js"></script>
-          <script src="js/angular-flash.min.js"></script>
+        <script src="js/angular-flash.min.js"></script>
+              <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
         <script src="js/angular-ui-bootstrap-modal.js"></script>
+
         <script type='text/javascript' src='js/angular-loading-bar/build/loading-bar.min.js'></script>
 
         <!-- load our custom app -->
         <script src="app.js"></script>
+        <script src='factories/angular_user_factory.js'></script>
+        <script src='services/authentication.service.js'></script>
         <script src='controllers/recipe_controller.js'></script>
         <script src='controllers/login_controller.js'></script>
         <script src='controllers/register_controller.js'></script>
         <script src='controllers/authentication.js'></script>
         <script src='controllers/logout_controller.js'></script>
-        <script src='factories/angular_user_factory.js'></script>
-        <script src='services/authentication.service.js'></script>
+        <script src='controllers/save_controller.js'></script>
+        <!-- <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.4.0.js"></script> -->
+
+
+
 
 
         </div>
+
+
 
 </body>
 

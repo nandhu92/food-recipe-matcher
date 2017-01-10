@@ -15,8 +15,8 @@ var usersSchema = new mongoose.Schema({
     salt: String,
 
     ingredientslist :[{
-      dish : {type : String}
-    //  saved : []
+      dish : {type : String},
+      saved : []
      }]
 
 });

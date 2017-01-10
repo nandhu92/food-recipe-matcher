@@ -1,8 +1,8 @@
 myApp.controller('AuthenticateController', function($scope, $rootScope, $location, authenticationService) {
 
   var vm = this;
-console.log("got here");
-console.log(this);
+//console.log("got here");
+//console.log(this);
     vm.isLoggedIn = authenticationService.isLoggedIn();
 
     vm.currentUser = authenticationService.currentUser();
@@ -13,8 +13,8 @@ console.log(this);
         $rootScope.loggedUser = vm.currentUser.name;
     }
 
-    console.log(vm.isLoggedIn);
-    console.log(vm.currentUser);
+  //  console.log(vm.isLoggedIn);
+    //console.log(vm.currentUser);
   //  $location.path('/authenticateUser');
 
 

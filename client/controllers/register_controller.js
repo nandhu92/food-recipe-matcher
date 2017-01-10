@@ -1,9 +1,12 @@
 
 myApp.controller('RegisterController', function($scope, $location, authenticationService) {
+    console.log($scope.showModal);
     $scope.showModal = true;
+      console.log($scope.showModal);
 
     $scope.cancel = function() {
         $scope.showModal = false;
+        //console.log($scope.showModal);
     };
 
     $scope.submitRegister = function() {

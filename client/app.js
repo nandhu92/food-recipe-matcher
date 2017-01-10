@@ -8,6 +8,11 @@ myApp.config(function($routeProvider) {
     //     templateUrl: 'partials/homepage.html',
     //     controller: 'RecipeController'
     // })
+    .when("/displayuser", {
+        // redirectTo: "/"
+      //  controller: 'AuthenticateController'
+      redirectTo: "/"
+    })
         .when("/signUp", {
             templateUrl: 'partials/register.html',
             controller: 'RegisterController'
@@ -15,6 +20,10 @@ myApp.config(function($routeProvider) {
         .when("/login", {
             templateUrl: 'partials/login.html',
             controller: 'LoginController'
+        })
+        .when("/savedList", {
+            templateUrl: 'partials/saveDisplay.html',
+            controller: 'SaveController'
         })
         .when("/save", {
             templateUrl: 'partials/saveRecipe.html',
@@ -24,11 +33,7 @@ myApp.config(function($routeProvider) {
             templateUrl: '',
             controller: 'LogoutController'
         })
-        .when("/displayuser", {
-            // redirectTo: "/"
-          //  controller: 'AuthenticateController'
-          redirectTo: "/"
-        })
+
         // .when("/authenticateUser", {
         //      redirectTo: "/"
         //     //controller: 'AuthenticateController'
@@ -78,4 +83,20 @@ myApp.directive('navigation', function() {
     restrict: 'EA',
         controller: 'AuthenticateController as navvm'
   }
+});
+
+myApp.directive('customPopover', function () {
+    return {
+        restrict: 'A',
+        template: '<span>{{label}}</span>',
+        link: function (scope, el, attrs) {
+            scope.label = attrs.popoverLabel;
+            $(el).popover({
+                trigger: 'click',
+                html: true,
+                content: attrs.popoverHtml,
+                placement: attrs.popoverPlacement
+            });
+        }
+    };
 });

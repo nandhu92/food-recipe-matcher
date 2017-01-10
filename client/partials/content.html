@@ -33,13 +33,31 @@
                 </div>
             </div>
         </div> -->
+<div >
+<!-- {{solution}} -->
+
+</div>
+
+
 
 <div class="shadowEffect">
+
         <div  class="w3-card-2 w3-margin" style="max-width:400px;">
           <header class="w3-container w3-light-grey w3-padding-16">
             <h3>My Ingredient List</h3>
           </header>
-          <a href="#/save" class="btn btn-link"> Save it !</a>
+          <div ng-if="!loggedUser">
+<div>
+  <span  class="icon-align glyphicon glyphicon-floppy-save"></span>
+  <span class="popover-style" custom-popover popover-html="Please login to save your search..." popover-placement="auto" popover-label="Save it !" customDirectives ></span>
+
+</div>
+
+        </div>
+          <div ng-if="loggedUser">
+              <span class="icon-align glyphicon glyphicon-floppy-save"></span>
+              <a href="#/save" class="btn btn-link"> Save it !</a>
+              </div>
           <!-- <button class="btn btn-primary btn-sm" ng-click="saveUserIngredients()"> Save it !</button> -->
           <div class="w3-row w3-margin-top">
             <div class="w3-col s10">
@@ -50,7 +68,7 @@
             </div>
           </div>
           <ul class="w3-ul">
-            <li ng-repeat="x in displayIngredients" class="w3-padding-16">{{x}}<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+            <li ng-repeat="x in displayIngredients" class="w3-padding-16">{{x}}<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right"><span class="glyphicon glyphicon-trash"></span></span></li>
           </ul>
           <div class="w3-container w3-light-grey w3-padding-16">
 

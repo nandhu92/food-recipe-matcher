@@ -1,12 +1,5 @@
-body {
-    background: url(../images/bg-sky.png);
-    background-repeat: repeat !important;
-    background-attachment: fixed;
-}
 
-ul.rel-results {
-    list-style-type: circle;
-}
+
 
 .nojs {
     padding: 2px;
@@ -117,6 +110,7 @@ left: 552px;
 top: 61px;
 /* background
     /*background-color: #c2c6c9;*/
+    background-color: rgba(0, 0, 0, .075);
     border-top:1px solid #ddd;
     border-radius: 100px / 0px;
     box-shadow:0 0 18px rgba(0,0,0,0.6);
@@ -208,8 +202,8 @@ top: 61px;
 
 .modal {
 width: 41%;
-height: 80%;
-margin-top: 12%;
+height: 100%;
+margin-top: 8%;
 margin-left: 31%;
 }
 
@@ -243,9 +237,9 @@ margin-top: -7%;
 
 .shadowEffect {
   width: 36%;
-  height: 660px;
+  height: 470px;
   margin-top: -1%;
-  /*background-color: #c2c6c9;*/
+background-color: rgba(0, 0, 0, .075);
   border-top:1px solid #ddd;
   border-radius: 100px / 0px;
   box-shadow:0 0 18px rgba(0,0,0,0.6);
@@ -292,9 +286,12 @@ h4 {
 }
 
 img {
-  height:250px;
-  width:250px;
-   border-radius: 8px;
+  height: 250px;
+      width: 258px;
+      border-radius: 8px;
+          padding-top: 9px;
+      padding-left: 10px;
+      border-radius: 20px;
 }
 
 .navbar-header {
@@ -313,9 +310,107 @@ margin-top: 26px;
 
 div.container{
 
-  /*width: 100%;*/
+  width: 100%;
+  height: 68px;
 
 }
 div.polaroid {
   max-height: 100%;
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}
+
+span.glyphicon.glyphicon.trash {
+  right: 32%;
+  top : 3%;
+}
+
+.rounded-button {
+    border-radius: 33px;
+    width: 27px;
+    height: 25px;
+}
+.img-align{
+  margin-bottom: 22px;
+    margin-left: 243px;
+    margin-top: 168px;
+
+    height: 427px;
+    width: 448px;
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.image-align {
+  height : 347px;
+}
+
+.text-center {
+  text-align: center;
+}
+#loading-bar-container {
+  position: relative;
+    background: #33ba3a;
+}
+
+.icon-align {
+      padding-left: 12px;
+      line-height: 3;
+
+}
+
+.close-icon-align{
+  float : right;
+  top : -15px;
+  cursor: pointer;
+}
+
+.popover-style {
+  cursor: pointer;
+   /*color: #fff;*/
 }

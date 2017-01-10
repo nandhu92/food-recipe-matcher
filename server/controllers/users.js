@@ -70,6 +70,32 @@ user.setPassword(req.body.password);
         })
     }
 
+
+    this.names = function(req, res) {
+//console.log(req.body.name);
+        User.find({
+            name: req.body.name
+        }, function(err, data) {
+          if(err){
+            console.log(err);
+            // console.log(err);
+            // res.json({
+            //                 errors: {
+            //
+            //                         message: "user name is already taken",
+            //
+            //
+            //                 },
+            //                 name: "Validation error"
+            //             });
+          } else {
+              //console.log("here");
+           console.log(data);
+            res.json(data);
+          }
+        })
+    }
+
     // username : nandhu
     // Ingredients : {
     // 	name1 : ['fish', 'chicken']
@@ -82,21 +108,21 @@ user.setPassword(req.body.password);
     //db.users.update({name : "susee"},{$set: {"ingredients":['fish', 'chicken', 'MongoDB']}},{multi:true})
 
         this.save = function(req, res) {
-          console.log(req.body);
+          //console.log(req.body);
         //  console.log(c);
-          var user = new User();
+        //  var user = new User();
 
 
-            // user.update({
-            //     name: req.body.name},{$push: {
-            //       "ingredientslist" : {
-            //         dish: req.body.saveName
-            //         //"saved": req.body.ingredients
-            //       }
-            //       }
-            //        },
-            user.findOne({
-                name: req.body.name},
+            User.update({
+                name: req.body.name},{$push: {
+                  "ingredientslist" : {
+                    dish: req.body.saveName,
+                    saved: req.body.ingredients
+                  }
+                  }
+                   },
+            // User.findOne({
+            //     name: req.body.name},
 
             function(err, data) {
               if(err){
@@ -112,7 +138,7 @@ user.setPassword(req.body.password);
                 //                 name: "Validation error"
                 //             });
         			} else {
-                console.log(data);
+              //  console.log(data);
         				res.json(data);
         			}
             });

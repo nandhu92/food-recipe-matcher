@@ -17,6 +17,14 @@ myApp.factory('IngredientsFactory', function($http) {
             callback(output);
         })
     };
+
+    factory.displaySaved = function(info, callback) {
+      //  console.log(info);
+
+        $http.post('/show_ingredients', info).success(function(output) {
+            callback(output);
+        })
+    };
     //registration factory
     factory.register = function(data, callback, errback) {
         $http.post('/register', data).then(callback, errback);

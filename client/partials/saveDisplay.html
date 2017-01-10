@@ -1,0 +1,45 @@
+
+  <div modal="showModal" class="modal" close="cancel()">
+    <div class="modal-header">
+        <h4>Saved</h4>
+    </div>
+    <div class="modal-body">
+
+      <!-- <ul class="w3-ul">
+        <li ng-repeat="list in saved_ingredients" class="w3-padding-16">
+          <div data-toggle="collapse{{ $index + 1 }}" data-target="#demo" ng-bind=list.saved_name></div>
+          <div  id="demo" class="collapse{{ $index + 1 }}">
+            {{list.saved_list}}
+          </div>
+
+
+          <span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+      </ul> -->
+
+      <div class="panel panel-default" ng-repeat="list in saved_ingredients">
+            <div class="panel-heading">
+                <button class="rounded-button" ng-click="list.isCollapsed = !list.isCollapsed">
+                  <div ng-if="list.isCollapsed">
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                  </div>
+                  <div ng-if="!list.isCollapsed">
+                    <span class="glyphicon glyphicon-triangle-top"></span>
+                  </div>
+                </button>
+                {{list.saved_name}}
+            </div>
+            {{element.isCollapsed}}
+            <div collapse="list.isCollapsed"><div ng-show="!list.isCollapsed" class="panel-body ">
+
+                <ul class="w3-ul">
+                  <li ng-repeat="items in list.saved_list" class="w3-padding-16">{{items}}<span ng-click="removeSavedItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right"><span class="glyphicon glyphicon-trash"></span></span></li>
+                </ul>
+
+
+
+            </div></div>
+        </div>
+
+          </div>
+
+        </div>

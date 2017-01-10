@@ -2,9 +2,10 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
 var path = require('path');
-mongoose.connect('mongodb://admin:password@ds155428.mlab.com:55428/recipe');
+mongoose.connect('mongodb://localhost/recipe');
 //process.env.MONGOLAB_URI
 //|| 'mongodb://localhost/recipe'
+//mongodb://admin:password@ds155428.mlab.com:55428/recipe
 var models_path =path.join( __dirname , '/../models');
 fs.readdirSync(models_path).forEach(function(file) {
   if(file.indexOf('.js') > 0) {

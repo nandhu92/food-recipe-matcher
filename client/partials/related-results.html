@@ -1,21 +1,22 @@
 
   <div class="h-scroll row">
 
-    <div ng-if=!details>
-      <h4>Sorry, there were no results for this search</h4>
+    <div ng-if=empty>
+      <img class="img-align" ng-src="../images/no-results-img.jpg" />
     </div>
+
       <div ng-repeat="y in details">
 
           <div ng-repeat="x in y">
 
-              <div class=" col-lg-4 col-md-3 col-sm-6 colxs-12 ">
+              <div class=" image-align col-lg-4 col-md-3 col-sm-6 colxs-12 ">
 
                   <div class="polaroid">
                   <a target="_blank" href="{{x.source_url}}"><img height="100" ng-src="{{x.image_url}}"></a>
 
                     <div class="container">
 
-                        <h4>{{x.title}}</h4>
+                        <h4 class="text-center">{{x.title}}</h4>
 
 
                     </div>
