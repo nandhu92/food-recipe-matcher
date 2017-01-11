@@ -10,12 +10,12 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "request": "^2.79.0",
-    "stringbuffer": "^1.0.0",
-    "bower": "^1.5.2"
+    "stringbuffer": "^1.0.0"
+  
   },
   "scripts": {
-    "start": "node server.js",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "start": "node server.js"
+
   },
   "name": "FoodGuru",
   "version": "1.0.0",
