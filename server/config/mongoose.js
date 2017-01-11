@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
 var path = require('path');
-mongoose.connect('mongodb://localhost/recipe');
+mongoose.connect('mongodb://admin:password@ds155428.mlab.com:55428/recipe');
 //process.env.MONGOLAB_URI
 //|| 'mongodb://localhost/recipe'
 //mongodb://admin:password@ds155428.mlab.com:55428/recipe
