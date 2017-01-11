@@ -36,7 +36,7 @@ $scope.login = function() {
                   $scope.showModal = false;
                 //  $location.path("displayuser");
                   //console.log("hey there");
-              // $window.location = 'index.html'
+               $window.location = 'index.html'
 //               var currentPageTemplate = $route.current.templateUrl;
 //               console.log(currentPageTemplate);
 // $templateCache.remove(currentPageTemplate);
@@ -71,6 +71,6 @@ $scope.login = function() {
 // // }
 //
 // })
- $location.path("displayuser");
+// $location.path("displayuser");
 }
   });
