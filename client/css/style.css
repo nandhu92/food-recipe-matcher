@@ -237,13 +237,14 @@ margin-top: -7%;
 
 .shadowEffect {
   width: 36%;
-  height: 470px;
+  height: 625px;
   margin-top: -1%;
 background-color: rgba(0, 0, 0, .075);
   border-top:1px solid #ddd;
   border-radius: 100px / 0px;
   box-shadow:0 0 18px rgba(0,0,0,0.6);
   z-index: -1;
+
 
 }
 
