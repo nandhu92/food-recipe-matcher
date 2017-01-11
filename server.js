@@ -15,6 +15,6 @@ require('./server/config/mongoose.js');
 require('./server/config/passport.js');
 require('./server/config/routes.js')(app);
 
-app.listen(8000, function(){
-	console.log('Running on port 8000!');
+app.listen(process.env.PORT || 8000, function(){
+	console.log('Running');
 })
