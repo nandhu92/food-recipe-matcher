@@ -6,7 +6,7 @@ myApp.controller('RegisterController', function($scope, $location, authenticatio
 
     $scope.cancel = function() {
         $scope.showModal = false;
-        //console.log($scope.showModal);
+        $location.path('displayuser');
     };
 
     $scope.submitRegister = function() {

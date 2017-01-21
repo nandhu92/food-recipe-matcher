@@ -9,7 +9,7 @@ myApp.config(function($routeProvider) {
     //     controller: 'RecipeController'
     // })
     .when("/displayuser", {
-        // redirectTo: "/"
+         //redirectTo: "/"
       //  controller: 'AuthenticateController'
       redirectTo: "/"
     })

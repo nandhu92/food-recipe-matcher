@@ -17,7 +17,7 @@ myApp.controller('RecipeController', function($scope, $location, $rootScope, $co
 //  $scope.solution.push($cookies.get('cookie'));
 
   //console.log($scope.solution);
-  //loadData();
+  loadData();
   function loadData() {
   //  debugger;
 

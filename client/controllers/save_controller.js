@@ -2,6 +2,10 @@ myApp.controller('SaveController', function($scope, $rootScope, IngredientsFacto
 
   $scope.showModal = true;
 //  var objs = authenticationService.getToken();
+$scope.cancel = function() {
+    $scope.showModal = false;
+    $location.path('displayuser');
+};
 console.log("here");
   var username = {
     name : $rootScope.loggedUser

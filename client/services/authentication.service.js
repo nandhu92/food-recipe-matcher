@@ -29,7 +29,7 @@ myApp.service('authenticationService', function($http, $window) {
         var payload = token.split('.')[1];
         payload = $window.atob(payload);
         payload = JSON.parse(payload);
-      //  console.log(payload);
+        console.log(payload);
         return {
           email : payload.email,
           name : payload.name

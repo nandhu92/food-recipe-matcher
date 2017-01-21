@@ -14,9 +14,11 @@ if(objs) {
 
 
 
-  $scope.cancel = function() {
-      $scope.showModal = false;
-  };
+
+    $scope.cancel = function() {
+        $scope.showModal = false;
+        $location.path('displayuser');
+    };
 
 $scope.login = function() {
    login_details = {

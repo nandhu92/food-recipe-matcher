@@ -237,7 +237,7 @@ margin-top: -7%;
 
 .shadowEffect {
   width: 36%;
-  height: 625px;
+  height: 670px;
   margin-top: -1%;
 background-color: rgba(0, 0, 0, .075);
   border-top:1px solid #ddd;
@@ -414,4 +414,15 @@ span.glyphicon.glyphicon.trash {
 .popover-style {
   cursor: pointer;
    /*color: #fff;*/
+}
+
+span.glyphicon.glyphicon-remove {
+  float: right;
+  top: -27px;
+      left: 28px;
+}
+
+
+span:hover {
+    background-color: white;
 }
