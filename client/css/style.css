@@ -32,8 +32,8 @@
 }
 
 .related-results {
-    -moz-animation-delay: 1.5s;
-    -webkit-animation-delay: 1.5s;
+    /*-moz-animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;*/
 }
 
 .movie-poster {
@@ -236,7 +236,8 @@ margin-top: -7%;
 
 
 .shadowEffect {
-  width: 36%;
+  /*width: 36%;*/
+  width: 110%;
   height: 670px;
   margin-top: -1%;
 background-color: rgba(0, 0, 0, .075);
@@ -288,7 +289,8 @@ h4 {
 
 img {
   height: 250px;
-      width: 258px;
+      /*width: 258px;*/
+      width: 96%;
       border-radius: 8px;
           padding-top: 9px;
       padding-left: 10px;
